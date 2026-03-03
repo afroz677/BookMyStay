@@ -4,22 +4,20 @@ public class BookMyStay {
         Room doubleRoom = new DoubleRoom();
         Room suiteRoom = new SuitRoom();
 
-        int singleAvailable = 5;
-        int doubleAvailable = 3;
-        int suiteAvailable = 2;
+        RoomInventory inventory = new RoomInventory();
 
-        System.out.println("Hotel Room Initialization\n");
+        System.out.println("Hotel Room Inventory Status\n");
 
         System.out.println("Single Room:");
         singleRoom.displayRoomDetails();
-        System.out.println("Available: " + singleAvailable);
+        System.out.println("Available Rooms: " + inventory.getRoomAvailability().get("Single"));
 
         System.out.println("\nDouble Room:");
         doubleRoom.displayRoomDetails();
-        System.out.println("Available: " + doubleAvailable);
+        System.out.println("Available Rooms: " + inventory.getRoomAvailability().get("Double"));
 
         System.out.println("\nSuite Room:");
         suiteRoom.displayRoomDetails();
-        System.out.println("Available: " + suiteAvailable);
+        System.out.println("Available Rooms: " + inventory.getRoomAvailability().get("Suite"));
     }
 }
